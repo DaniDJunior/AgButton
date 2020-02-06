@@ -42,6 +42,8 @@ void AgButton::loop() {
           previousMillis = 0;
           Status = false;
           PulseDown = true;
+          if(fun_onClick)
+               (*fun_onClick)(Status);
      }
   }
   else
@@ -58,6 +60,13 @@ void AgButton::loop() {
           previousMillis = 0;
           Status = true;
           PulseUp = true;
+          if(fun_onClick)
+               (*fun_onClick)(Status); 
      }    
   }
+}
+
+void A2a::onClick( void (*function)(bool) )
+{
+     fun_onClick = function;
 }
