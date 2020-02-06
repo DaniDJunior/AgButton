@@ -12,12 +12,14 @@ class AgButton {
     bool Status;
     bool PulseUp;
     bool PulseDown;
+    void onClick( void (*)(bool) );
   private:
     long previousMillis;
     long intervalUp;
     long intervalDown;
     long intervalDebounce;
     byte pino;
+    void (*fun_onClick)(bool)
 };
 
 #endif
