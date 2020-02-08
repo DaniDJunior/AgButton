@@ -66,7 +66,7 @@ void AgButton::loop() {
   }
 }
 
-void A2a::onClick( void (*function)(bool) )
+void AgButton::onClick( void (*function)(bool) )
 {
      fun_onClick = function;
 }

@@ -19,7 +19,7 @@ class AgButton {
     long intervalDown;
     long intervalDebounce;
     byte pino;
-    void (*fun_onClick)(bool)
+    void (*fun_onClick)(bool);
 };
 
 #endif
